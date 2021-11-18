@@ -1,5 +1,9 @@
 #!/bin/sh
 
+if [ ! -z "$SLEEPTIME" ];then
+  sleep $SLEEPTIME
+fi
+
 set -eux
 
 if [ -z "${CMD_PATH+x}" ]; then

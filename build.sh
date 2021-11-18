@@ -20,6 +20,7 @@ if [ -x "./build.sh" ]; then
   OUTPUT=`./build.sh "${CMD_PATH}"`
 else
   go build "${CMD_PATH}"
+  PROJECT_NAME=$(basename $GITHUB_REPOSITORY)
   OUTPUT="${PROJECT_NAME}${EXT}"
 fi
 
